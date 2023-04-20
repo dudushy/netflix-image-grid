@@ -1,0 +1,21 @@
+<header [attr.theme]="theme" [attr.mobileMode]="mobileMode">
+  <h1>
+    <a [attr.theme]="theme" href="https://github.com/dudushy/netflix-image-grid" target="_blank">netflix-image-grid</a>
+  </h1>
+
+  <nav>
+    <a *ngFor="let page of all_pages | keyvalue : defaultOrder" [attr.theme]="theme" [attr.isActive]="last_page == page.value" (click)="redirectTo(page.value, this.title)">{{page.value == '' ? 'home' : page.value}}</a>
+  </nav>
+</header>
+
+<router-outlet></router-outlet>
+
+<footer [attr.theme]="theme" [attr.mobileMode]="mobileMode">
+  <p [attr.theme]="theme">
+    Made with <span [attr.theme]="theme" id="heart">&#10084;</span>
+    <br>
+    by
+    <br>
+    <a [attr.theme]="theme" href="https://github.com/dudushy" target="_blank">dudushy</a>
+  </p>
+</footer>
