@@ -1,0 +1,29 @@
+@import "/src/styles.scss";
+
+main {
+  margin-block: 1%;
+}
+
+img {
+  width: 5%;
+  padding: 1%;
+  margin: 0;
+  border-radius: 50%;
+  transition: all 300ms;
+  &[theme="dark"] {
+    background-color: $warning !important;
+    box-shadow: 0 0 20px $warning;
+    &:hover {
+      // background-color: $danger !important;
+      box-shadow: 0 0 20px $danger;
+    }
+  }
+  &[theme="light"] {
+    background-color: $danger !important;
+    box-shadow: 0 0 20px $danger;
+    &:hover {
+      // background-color: $warning !important;
+      box-shadow: 0 0 20px $warning;
+    }
+  }
+}
