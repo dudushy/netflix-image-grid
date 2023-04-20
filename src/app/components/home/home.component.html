@@ -1,0 +1,9 @@
+<main>
+  <div class="slider">
+    <div *ngFor="let item of createRange(15)" class="sliderItem">
+      <p>{{item}}</p>
+      <img *ngIf="app.theme == 'dark'" src="assets/SVGs/moon.svg">
+      <img *ngIf="app.theme == 'light'" src="assets/SVGs/sunny.svg">
+    </div>
+  </div>
+</main>
